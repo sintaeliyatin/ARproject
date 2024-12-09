@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR.js Jantung 3D</title>
+    <!-- A-Frame dan AR.js -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="trackingBackend: artoolkit; markersAreaEnabled: false;">
+      <!-- Marker Hiro -->
+      <a-marker type="pattern" url="pattern-qr-code (10).patt">
+        <a-entity gltf-model="./jantung_manusia.glb" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+      </a-marker>
+      
+      <!-- Kamera Default -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
